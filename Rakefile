@@ -2,11 +2,13 @@
 
 require 'rubygems'
 require 'hoe'
-require './tasks/spec.rb'
 require './tasks/yard.rb'
 
 Hoe.spec 'ruby-nikto' do
   self.developer('Postmodern', 'postmodern.mod3@gmail.com')
+
+  self.rspec_options += ['--colour', '--format', 'specdoc']
+
   self.remote_rdoc_dir = '/'
   self.extra_deps = [
     ['nokogiri', '>=1.4.0'],
