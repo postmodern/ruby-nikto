@@ -7,7 +7,6 @@ lib/nikto/task.rb
 lib/nikto/program.rb
 lib/nikto/xml.rb
 lib/nikto/version.rb
-tasks/yard.rb
 spec/spec_helper.rb
 spec/helpers/scan.xml
 spec/helpers/xml.rb
