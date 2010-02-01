@@ -20,7 +20,7 @@ Hoe.spec 'ruby-nikto' do
 
   self.extra_dev_deps = [
     ['rspec', '>=1.3.0'],
-    ['yard', '>=0.4.0']
+    ['yard', '>=0.5.3']
   ]
 end
 
