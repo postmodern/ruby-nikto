@@ -1,45 +1,45 @@
-= ruby-nikto
+# ruby-nikto
 
 * http://github.com/sophsec/ruby-nikto
 * http://github.com/sophsec/ruby-nikto/issues
 * Postmodern (postmodern.mod3 at gmail.com)
 
-== DESCRIPTION:
+## DESCRIPTION:
 
 A Ruby interface to Nikto.
 
-== FEATURES:
+## FEATURES:
 
 * Provides a Ruby interface for running Nikto.
 * Provides a Parser for enumerating Nikto XML scan files.
 
-== EXAMPLES:
+## EXAMPLES:
 
-* Run Nikto from Ruby:
+Run Nikto from Ruby:
 
     require 'nikto/program'
     
     Nikto::Program.scan do |nikto|
     end
 
-* Parse Nikto XML scan files:
+Parse Nikto XML scan files:
 
     require 'nikto/xml'
 
     Nikto::XML.new('scan.xml') do |xml|
     end
 
-== REQUIREMENTS:
+## REQUIREMENTS:
 
-* {nikto}[http://cirt.net/nikto2] >= 2.0.0
-* {nokogiri}[http://nokogiri.rubyforge.org/] >= 1.4.0
-* {rprogram}[http://rprogram.rubyforge.org/] >= 0.1.7
+* [nikto](http://cirt.net/nikto2) >= 2.0.0
+* [nokogiri](http://nokogiri.rubyforge.org/) >= 1.4.0
+* [rprogram](http://rprogram.rubyforge.org/) >= 0.1.7
 
-== INSTALL:
+## INSTALL:
 
-  $ sudo gem install ruby-nikto
+    $ sudo gem install ruby-nikto
 
-== LICENSE:
+## LICENSE:
 
 The MIT License
 

@@ -2,31 +2,32 @@ require 'rprogram/task'
 
 module Nikto
   #
-  # == Nikto options:
-  # <tt>-h</tt>:: <tt>nikto.host</tt>
-  # <tt>-config</tt>:: <tt>nikto.config</tt>
-  # <tt>-Cgidirs</tt>:: <tt>nikto.cgi_dirs</tt>
-  # <tt>-cookies</tt>:: <tt>nikto.print_cookies</tt>
-  # <tt>-evasion</tt>:: <tt>nikto.evasion</tt>
-  # <tt>-findonly</tt>:: <tt>nikto.evasion</tt>
-  # <tt>-Format</tt>:: <tt>nikto.format</tt>
-  # <tt>-generic</tt>:: <tt>nikto.full_scan</tt>
-  # <tt>-id</tt>:: <tt>nikto.http_auth</tt>
-  # <tt>-mutate</tt>:: <tt>nikto.mutate_checks</tt>
-  # <tt>-nolookup</tt>:: <tt>nikto.no_lookup</tt>
-  # <tt>-output</tt>:: <tt>nikto.output</tt>
-  # <tt>-port</tt>:: <tt>nikto.port</tt>
-  # <tt>-root</tt>:: <tt>nikto.root</tt>
-  # <tt>-ssl</tt>:: <tt>nikto.ssl</tt>
-  # <tt>-timeout</tt>:: <tt>nikto.timeout</tt>
-  # <tt>-useproxy</tt>:: <tt>nikto.enable_proxy</tt>
-  # <tt>-vhost</tt>:: <tt>nikto.vhost</tt>
-  # <tt>-Version</tt>:: <tt>nikto.version</tt>
-  # <tt>-404</tt>:: <tt>nikto.not_found_message</tt>
-  # <tt>-dbcheck</tt>:: <tt>nikto.validate_checks</tt>
-  # <tt>-debug</tt>:: <tt>nikto.debug</tt>
-  # <tt>-update</tt>:: <tt>nikto.update</tt>
-  # <tt>-verbose</tt>:: <tt>nikto.verbose</tt>
+  # ## Nikto options:
+  #
+  # * `-h` - `nikto.host`
+  # * `-config` - `nikto.config`
+  # * `-Cgidirs` - `nikto.cgi_dirs`
+  # * `-cookies` - `nikto.print_cookies`
+  # * `-evasion` - `nikto.evasion`
+  # * `-findonly` - `nikto.evasion`
+  # * `-Format` - `nikto.format`
+  # * `-generic` - `nikto.full_scan`
+  # * `-id` - `nikto.http_auth`
+  # * `-mutate` - `nikto.mutate_checks`
+  # * `-nolookup` - `nikto.no_lookup`
+  # * `-output` - `nikto.output`
+  # * `-port` - `nikto.port`
+  # * `-root` - `nikto.root`
+  # * `-ssl` - `nikto.ssl`
+  # * `-timeout` - `nikto.timeout`
+  # * `-useproxy` - `nikto.enable_proxy`
+  # * `-vhost` - `nikto.vhost`
+  # * `-Version` - `nikto.version`
+  # * `-404` - `nikto.not_found_message`
+  # * `-dbcheck` - `nikto.validate_checks`
+  # * `-debug` - `nikto.debug`
+  # * `-update` - `nikto.update`
+  # * `-verbose` - `nikto.verbose`
   #
   # @see http://linux.die.net/man/1/nikto
   #
@@ -47,7 +48,7 @@ module Nikto
     end
 
     #
-    # Enable adding self-referencing directories (<tt>/./</tt>) to the
+    # Enable adding self-referencing directories (`/./`) to the
     # request.
     #
     def directory_self_reference!
@@ -98,7 +99,7 @@ module Nikto
 
     #
     # Enable use of Windows style directory separators
-    # (<tt>\\</tt> instead of <tt>/</tt>).
+    # (<code>\\</code> instead of <code>/</code>).
     #
     def windows_directories!
       self.evasion ||= ''
@@ -117,21 +118,21 @@ module Nikto
     short_option :flag => '-Format', :name => :format
 
     #
-    # Sets the report format to +HTM+.
+    # Sets the report format to `HTM`.
     #
     def html_format!
       self.format = 'HTM'
     end
 
     #
-    # Sets the report format to +TXT+.
+    # Sets the report format to `TXT`.
     #
     def text_format!
       self.format = 'TXT'
     end
 
     #
-    # Sets the report format to +CVS+.
+    # Sets the report format to `CVS`.
     #
     def csv_format!
       self.format = 'CSV'
