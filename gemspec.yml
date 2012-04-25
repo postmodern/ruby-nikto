@@ -1,0 +1,19 @@
+name: ruby-nikto
+summary: A Ruby interface to Nikto.
+description: A Ruby interface to Nikto, the Web Server scanner.
+license: MIT
+authors: Postmodern
+email: postmodern.mod3@gmail.com
+homepage: http://github.com/sophsec/ruby-nikto
+has_yard: true
+
+requirements: nikto >= 2.0.0
+
+dependencies:
+  nokogiri: ~> 1.4
+  rprogram: ~> 0.2
+
+development_dependencies:
+  rubygems-tasks: ~> 0.1
+  rspec: ~> 2.0
+  yard: ~> 0.7

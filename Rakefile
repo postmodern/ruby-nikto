@@ -1,44 +1,36 @@
 require 'rubygems'
 require 'rake'
-require './lib/nikto/version.rb'
 
 begin
-  require 'jeweler'
-  Jeweler::Tasks.new do |gem|
-    gem.name = 'ruby-nikto'
-    gem.version = Nikto::VERSION
-    gem.summary = %Q{A Ruby interface to Nikto.}
-    gem.description = %Q{A Ruby interface to Nikto.}
-    gem.email = 'postmodern.mod3@gmail.com'
-    gem.homepage = 'http://github.com/sophsec/ruby-nikto'
-    gem.authors = ['Postmodern']
-    gem.add_dependency 'nokogiri', '>=1.4.0'
-    gem.add_dependency 'rprogram', '>=0.1.7'
-    gem.add_development_dependency 'rspec', '>= 1.3.0'
-    gem.add_development_dependency 'yard', '>= 0.5.3'
-    gem.has_rdoc = 'yard'
+  gem 'rubygems-tasks', '~> 0.1'
+  require 'rubygems/tasks'
+
+  Gem::Tasks.new
+rescue LoadError => e
+  warn e.message
+  warn "Run `gem install rubygems-tasks` to install 'rubygems/tasks'."
+end
+
+begin
+  gem 'rspec', '~> 2.0'
+  require 'rspec/core/rake_task'
+
+  RSpec::Core::RakeTask.new
+rescue LoadError => e
+  task :spec do
+    abort "Please run `gem install rspec` to install RSpec."
   end
-  Jeweler::GemcutterTasks.new
-rescue LoadError
-  puts "Jeweler (or a dependency) not available. Install it with: gem install jeweler"
 end
-
-require 'spec/rake/spectask'
-Spec::Rake::SpecTask.new(:spec) do |spec|
-  spec.libs += ['lib', 'spec']
-  spec.spec_files = FileList['spec/**/*_spec.rb']
-  spec.spec_opts = ['--options', '.specopts']
-end
-
-task :spec => :check_dependencies
+task :test => :spec
 task :default => :spec
 
 begin
+  gem 'yard', '~> 0.7'
   require 'yard'
 
-  YARD::Rake::YardocTask.new
-rescue LoadError
+  YARD::Rake::YardocTask.new  
+rescue LoadError => e
   task :yard do
-    abort "YARD is not available. In order to run yard, you must: gem install yard"
+    abort "Please run `gem install yard` to install YARD."
   end
 end

@@ -1,8 +1,8 @@
 # ruby-nikto
 
-* [github.com/sophsec/ruby-nikto](http://github.com/sophsec/ruby-nikto/)
-* [github.com/sophsec/ruby-nikto/issues](http://github.com/sophsec/ruby-nikto/issues)
-* Postmodern (postmodern.mod3 at gmail.com)
+* [Source](https://github.com/sophsec/ruby-nikto)
+* [Issues](https://github.com/sophsec/ruby-nikto/issues)
+* [Email](mailto:postmodern.mod3 at gmail.com)
 
 ## Description
 
@@ -32,12 +32,12 @@ Parse Nikto XML scan files:
 ## Requirements
 
 * [nikto](http://cirt.net/nikto2) >= 2.0.0
-* [nokogiri](http://nokogiri.rubyforge.org/) >= 1.4.0
-* [rprogram](http://rprogram.rubyforge.org/) >= 0.1.7
+* [nokogiri](http://nokogiri.rubyforge.org/) ~> 1.4
+* [rprogram](http://rprogram.rubyforge.org/) ~> 0.2
 
 ## Install
 
-    $ sudo gem install ruby-nikto
+    $ gem install ruby-nikto
 
 ## License
 
