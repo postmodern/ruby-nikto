@@ -23,6 +23,12 @@ module Nikto
       yield self if block_given?
     end
 
+    #
+    # Converts the XML object into a String.
+    #
+    # @return [String]
+    #   The path to the nikto XML file.
+    #
     def to_s
       @path.to_s
     end
