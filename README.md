@@ -5,7 +5,7 @@
 
 ## Description
 
-A Ruby interface to Nikto.
+A Ruby interface to [nikto].
 
 ## Features
 
@@ -36,7 +36,7 @@ end
 
 ## Requirements
 
-* [nikto](http://cirt.net/nikto2) >= 2.0.0
+* [nikto] >= 2.0.0
 * [nokogiri](http://nokogiri.rubyforge.org/) ~> 1.4
 * [command_mapper](http://github.com/postmodern/command_mapper.rb#readme) ~> 0.1
 
@@ -52,3 +52,4 @@ Copyright (c) 2009-2021 Hal Brodigan
 
 See {file:LICENSE.txt} for license information.
 
+[nikto]: https://github.com/sullo/nikto
