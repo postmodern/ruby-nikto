@@ -16,17 +16,23 @@ A Ruby interface to Nikto.
 
 Run Nikto from Ruby:
 
-    require 'nikto/program'
+```ruby
+require 'nikto/program'
     
-    Nikto::Program.scan do |nikto|
-    end
+Nikto::Program.scan do |nikto|
+  # ...
+end
+```
 
 Parse Nikto XML scan files:
 
-    require 'nikto/xml'
+```ruby
+require 'nikto/xml'
 
-    Nikto::XML.new('scan.xml') do |xml|
-    end
+Nikto::XML.new('scan.xml') do |xml|
+  # ...
+end
+```
 
 ## Requirements
 
@@ -36,7 +42,9 @@ Parse Nikto XML scan files:
 
 ## Install
 
-    $ gem install ruby-nikto
+```shell
+$ gem install ruby-nikto
+```
 
 ## License
 
