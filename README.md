@@ -2,7 +2,6 @@
 
 * [Source](https://github.com/sophsec/ruby-nikto)
 * [Issues](https://github.com/sophsec/ruby-nikto/issues)
-* [Email](mailto:postmodern.mod3 at gmail.com)
 
 ## Description
 
