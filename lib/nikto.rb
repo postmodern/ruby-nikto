@@ -1,2 +1,2 @@
-require 'nikto/program'
+require 'nikto/command'
 require 'nikto/version'

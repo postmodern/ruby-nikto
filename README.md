@@ -33,7 +33,7 @@ Parse Nikto XML scan files:
 
 * [nikto](http://cirt.net/nikto2) >= 2.0.0
 * [nokogiri](http://nokogiri.rubyforge.org/) ~> 1.4
-* [rprogram](http://rprogram.rubyforge.org/) ~> 0.2
+* [command_mapper](http://github.com/postmodern/command_mapper.rb#readme) ~> 0.1
 
 ## Install
 

@@ -11,7 +11,7 @@ requirements: nikto >= 2.0.0
 
 dependencies:
   nokogiri: ~> 1.4
-  rprogram: ~> 0.2
+  command_mapper: ~> 0.1
 
 development_dependencies:
   bundler: ~> 2.0
