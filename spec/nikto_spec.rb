@@ -1,9 +1,8 @@
-require 'nikto/version'
-
 require 'spec_helper'
+require 'nikto/version'
 
 describe Nikto do
   it "should have a VERSION constant" do
-    Nikto.const_defined?('VERSION').should == true
+    expect(subject.const_get('VERSION')).to_not be_empty
   end
 end
