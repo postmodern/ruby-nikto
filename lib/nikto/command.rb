@@ -44,7 +44,7 @@ module Nikto
       # @param [Hash{Symbol => String}] options
       #
       def initialize(options)
-        super(type: CommandMapper::Types::Enum.new(options), separator: '')
+        super(type: CommandMapper::Types::Map.new(options), separator: '')
       end
 
     end
