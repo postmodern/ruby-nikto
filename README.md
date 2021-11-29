@@ -17,11 +17,9 @@ A Ruby interface to [nikto].
 Run Nikto from Ruby:
 
 ```ruby
-require 'nikto/program'
+require 'nikto/command'
     
-Nikto::Program.scan do |nikto|
-  # ...
-end
+Nikto::Command.run(host: 'example.com', output: 'path/to/file.xml', format: 'xml')
 ```
 
 Parse Nikto XML scan files:
