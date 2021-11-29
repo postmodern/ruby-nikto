@@ -51,7 +51,7 @@ module Nikto
 
     class PortList < CommandMapper::Types::Num
 
-      def valdate(value)
+      def validate(value)
         case value
         when Array
           value.each do |element|
