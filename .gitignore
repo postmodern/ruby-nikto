@@ -1,6 +1,6 @@
-doc
-pkg
-tmp/*
+/Gemfile.lock
+/doc
+/pkg
 .DS_Store
 .yardoc
 *.db
