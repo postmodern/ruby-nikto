@@ -7,7 +7,7 @@ email: postmodern.mod3@gmail.com
 homepage: http://github.com/sophsec/ruby-nikto
 has_yard: true
 
-requirements: nikto >= 2.0.0
+requirements: nikto >= 2.1.0
 
 dependencies:
   nokogiri: ~> 1.4

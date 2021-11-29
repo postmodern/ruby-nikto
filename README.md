@@ -34,7 +34,7 @@ end
 
 ## Requirements
 
-* [nikto] >= 2.0.0
+* [nikto] >= 2.1.0
 * [nokogiri](http://nokogiri.rubyforge.org/) ~> 1.4
 * [command_mapper](http://github.com/postmodern/command_mapper.rb#readme) ~> 0.1
 
