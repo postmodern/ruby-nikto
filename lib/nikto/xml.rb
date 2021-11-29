@@ -16,11 +16,11 @@ module Nikto
     # @yieldparam [XML] xml
     #   The newly created XML parser.
     #
-    def initialize(path,&block)
+    def initialize(path)
       @path = File.expand_path(path)
-      @xml = Nokogiri::XML(File.new(@path))
+      @xml  = Nokogiri::XML(File.new(@path))
 
-      block.call(self) if block
+      yield self if block_given?
     end
 
     def to_s
