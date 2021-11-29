@@ -1,3 +1,5 @@
+require 'nikto/xml/scan_details'
+
 require 'nokogiri'
 
 module Nikto
@@ -60,6 +62,91 @@ module Nikto
       path = File.expand_path(path)
 
       new(Nokogiri::XML(File.open(path)), path: path)
+    end
+
+    #
+    # @return [Integer]
+    #
+    def hosts_test
+      @hosts_test ||= @doc.root['@hoststest'].to_i
+    end
+
+    #
+    # Additional command-line options passed to `nikto`.
+    #
+    # @return [String]
+    #
+    def options
+      @doc.root['options']
+    end
+
+    #
+    # When the scan started.
+    #
+    # @return [Time]
+    #
+    def scan_start
+      @scan_start ||= Time.parse(@doc.root['scanstart'])
+    end
+
+    #
+    # When the scan completed.
+    #
+    # @return [Time]
+    #
+    def scan_end
+      @scan_end ||= Time.parse(@doc.root['scanend'])
+    end
+
+    #
+    # The duration of the scan.
+    #
+    # @return [String]
+    #
+    def scan_elapsed
+      @doc.root['scan_elapsed']
+    end
+
+    #
+    # The Nikto XML schema version.
+    #
+    # @return [String]
+    #
+    def nikto_xml_version
+      @doc.root['nxmlversion']
+    end
+
+    #
+    # @yield [scan_details]
+    #
+    # @yieldparam [ScanDetails] scan_details
+    #
+    # @return [Enumerator]
+    #
+    def each_scan_details
+      return enum_for(__method__) unless block_given?
+
+      @doc.xpath('/niktoscan/scandetails').each do |node|
+        yield ScanDetails.new(node)
+      end
+    end
+
+    #
+    # @return [Array<ScanDetails>]
+    #
+    def scan_details
+      each_scan_details.to_a
+    end
+
+    alias each_target each_scan_details
+
+    alias targets scan_details
+
+    #
+    # @return [ScanDetails, nil]
+    #
+    def target
+      each_target.first
     end
 
   end
