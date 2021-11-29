@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<!DOCTYPE niktoscan SYSTEM "/usr/share/doc/nikto/nikto.dtd">
+<niktoscan hoststest="0" options="-host example.com -output nikto.xml" version="2.1.6" scanstart="Mon Nov 29 07:22:56 2021" scanend="Wed Dec 31 16:00:00 1969" scanelapsed=" seconds" nxmlversion="1.2">
+
+<scandetails targetip="93.184.216.34" targethostname="example.com" targetport="80" targetbanner="ECS (sec/974D)" starttime="2021-11-29 07:22:57" sitename="http://example.com:80/" siteip="http://93.184.216.34:80/" hostheader="example.com" errors="0" checks="4587">
+
+
+<item id="#ID#" osvdbid="#TEMPL_OSVDB#" osvdblink="#TEMPL_OSVDB_LINK#" method="#TEMPL_HTTP_METHOD#">
+<description><![CDATA[#TEMPL_MSG#]]></description>
+<uri><![CDATA[#TEMPL_URI#]]></uri>
+<namelink><![CDATA[#TEMPL_ITEM_NAME_LINK#]]></namelink>
+<iplink><![CDATA[#TEMPL_ITEM_IP_LINK#]]></iplink>
+</item>
+
+<item id="#ID#" osvdbid="#TEMPL_OSVDB#" osvdblink="#TEMPL_OSVDB_LINK#" method="#TEMPL_HTTP_METHOD#">
+<description><![CDATA[#TEMPL_MSG#]]></description>
+<uri><![CDATA[#TEMPL_URI#]]></uri>
+<namelink><![CDATA[#TEMPL_ITEM_NAME_LINK#]]></namelink>
+<iplink><![CDATA[#TEMPL_ITEM_IP_LINK#]]></iplink>
+</item>
+
+<item id="#ID#" osvdbid="#TEMPL_OSVDB#" osvdblink="#TEMPL_OSVDB_LINK#" method="#TEMPL_HTTP_METHOD#">
+<description><![CDATA[#TEMPL_MSG#]]></description>
+<uri><![CDATA[#TEMPL_URI#]]></uri>
+<namelink><![CDATA[#TEMPL_ITEM_NAME_LINK#]]></namelink>
+<iplink><![CDATA[#TEMPL_ITEM_IP_LINK#]]></iplink>
+</item>
+
+<item id="#ID#" osvdbid="#TEMPL_OSVDB#" osvdblink="#TEMPL_OSVDB_LINK#" method="#TEMPL_HTTP_METHOD#">
+<description><![CDATA[#TEMPL_MSG#]]></description>
+<uri><![CDATA[#TEMPL_URI#]]></uri>
+<namelink><![CDATA[#TEMPL_ITEM_NAME_LINK#]]></namelink>
+<iplink><![CDATA[#TEMPL_ITEM_IP_LINK#]]></iplink>
+</item>
+
+<item id="#ID#" osvdbid="#TEMPL_OSVDB#" osvdblink="#TEMPL_OSVDB_LINK#" method="#TEMPL_HTTP_METHOD#">
+<description><![CDATA[#TEMPL_MSG#]]></description>
+<uri><![CDATA[#TEMPL_URI#]]></uri>
+<namelink><![CDATA[#TEMPL_ITEM_NAME_LINK#]]></namelink>
+<iplink><![CDATA[#TEMPL_ITEM_IP_LINK#]]></iplink>
+</item>
+
+<statistics elapsed="178" itemsfound="5" itemstested="4587" endtime="2021-11-29 07:25:55" />
+</scandetails>
+
+
+</niktoscan>
