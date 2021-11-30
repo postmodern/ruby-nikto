@@ -2,6 +2,8 @@ require 'command_mapper/command'
 
 module Nikto
   #
+  # Provides an interface for invoking the `nikto` utility.
+  #
   # ## Example
   #
   #     require 'nikto/command'
