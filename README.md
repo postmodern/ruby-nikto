@@ -65,4 +65,4 @@ Copyright (c) 2009-2021 Hal Brodigan
 
 See {file:LICENSE.txt} for license information.
 
-[nikto]: https://github.com/sullo/nikto
+[nikto]: https://github.com/sullo/nikto#readme
