@@ -22,7 +22,7 @@ Run Nikto from Ruby:
 ```ruby
 require 'nikto/command'
     
-Nikto::Command.run(host: 'example.com', output: 'path/to/file.xml', format: 'xml')
+Nikto::Command.run(host: 'example.com', output: 'nikto.xml')
 ```
 
 Parse Nikto XML scan files:
@@ -30,7 +30,7 @@ Parse Nikto XML scan files:
 ```ruby
 require 'nikto/xml'
 
-Nikto::XML.new('scan.xml') do |xml|
+Nikto::XML.open('nikto.xml') do |xml|
   # ...
 end
 ```
