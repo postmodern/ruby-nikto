@@ -113,7 +113,7 @@ describe Nikto::XML do
 
   describe "#each_scan_details" do
     context "when given a block" do
-      it "must yield each scan details" do
+      it "must yield each ScanDetails object" do
         expect { |b|
           subject.each_scan_details(&b)
         }.to yield_successive_args(described_class::ScanDetails)
@@ -123,7 +123,7 @@ describe Nikto::XML do
     context "when no block is given" do
       subject { super().each_scan_details.to_a }
 
-      it "must return an Enumerator of #{described_class}::ScanDetails" do
+      it "must return an Enumerator of #{described_class}::ScanDetails objects" do
         expect(subject.length).to be(1)
         expect(subject[0]).to be_kind_of(described_class::ScanDetails)
       end
