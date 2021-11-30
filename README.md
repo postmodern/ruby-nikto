@@ -13,9 +13,10 @@ A Ruby interface to [nikto].
 ## Features
 
 * Provides a [Ruby interface][Nikto::Command] for running the `nikto` utility.
-* Provides a Parser for enumerating Nikto XML scan files.
+* Provides a [parser][Nikto::XML] for enumerating Nikto XML scan files.
 
 [Nikto::Command]: https://rubydoc.info/gems/ruby-nikto/Nikto/Command
+[Nikto::XML]: https://rubydoc.info/gems/ruby-nikto/Nikto/XML
 
 ## Examples
 
