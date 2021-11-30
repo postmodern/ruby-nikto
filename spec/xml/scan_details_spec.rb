@@ -14,6 +14,10 @@ describe Nikto::XML::ScanDetails do
   describe "#target_ip" do
     subject { super().target_ip }
 
+    it "must return a String" do
+      expect(subject).to be_kind_of(String)
+    end
+
     it "must return the 'targetip' attribute" do
       expect(subject).to eq(node['targetip'])
     end
@@ -21,6 +25,10 @@ describe Nikto::XML::ScanDetails do
 
   describe "#target_hostname" do
     subject { super().target_hostname }
+
+    it "must return a String" do
+      expect(subject).to be_kind_of(String)
+    end
 
     it "must return the 'targethostname' attribute" do
       expect(subject).to eq(node['targethostname'])
@@ -33,10 +41,18 @@ describe Nikto::XML::ScanDetails do
     it "must return the 'targetport' attribute as an Integer" do
       expect(subject).to eq(node['targetport'].to_i)
     end
+
+    it "must be > 0" do
+      expect(subject).to be > 0
+    end
   end
 
   describe "#target_banner" do
     subject { super().target_banner }
+
+    it "must return a String" do
+      expect(subject).to be_kind_of(String)
+    end
 
     it "must return the 'targetbanner' attribute" do
       expect(subject).to eq(node['targetbanner'])
@@ -54,6 +70,10 @@ describe Nikto::XML::ScanDetails do
   describe "#site_name" do
     subject { super().site_name }
 
+    it "must return a String" do
+      expect(subject).to be_kind_of(String)
+    end
+
     it "must return the 'sitename' attribute" do
       expect(subject).to eq(node['sitename'])
     end
@@ -62,6 +82,10 @@ describe Nikto::XML::ScanDetails do
   describe "#site_ip" do
     subject { super().site_ip }
 
+    it "must return a String" do
+      expect(subject).to be_kind_of(String)
+    end
+
     it "must return the 'siteip' attribute" do
       expect(subject).to eq(node['siteip'])
     end
@@ -69,6 +93,10 @@ describe Nikto::XML::ScanDetails do
 
   describe "#host_header" do
     subject { super().host_header }
+
+    it "must return a String" do
+      expect(subject).to be_kind_of(String)
+    end
 
     it "must return the 'hostheader' attribute" do
       expect(subject).to eq(node['hostheader'])
@@ -106,6 +134,10 @@ describe Nikto::XML::ScanDetails do
 
     it "must return the 'checks' attribute as an Integer" do
       expect(subject).to eq(node['checks'].to_i)
+    end
+
+    it "must be > 0" do
+      expect(subject).to be > 0
     end
   end
 

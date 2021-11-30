@@ -17,6 +17,10 @@ describe Nikto::XML::Statistics do
     it "must return the 'elapsed' attribute as an Integer" do
       expect(subject).to eq(node['elapsed'].to_i)
     end
+
+    it "must be greater than 0" do
+      expect(subject).to be > 0
+    end
   end
 
   describe "#items_found" do
@@ -25,6 +29,10 @@ describe Nikto::XML::Statistics do
     it "must return the 'itemsfound' attribute as an Integer" do
       expect(subject).to eq(node['itemsfound'].to_i)
     end
+
+    it "must be greater than 0" do
+      expect(subject).to be > 0
+    end
   end
 
   describe "#items_tested" do
@@ -32,6 +40,10 @@ describe Nikto::XML::Statistics do
 
     it "must return the 'itemstested' attribute as an Integer" do
       expect(subject).to eq(node['itemstested'].to_i)
+    end
+
+    it "must be greater than 0" do
+      expect(subject).to be > 0
     end
   end
 

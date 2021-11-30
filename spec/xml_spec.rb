@@ -74,6 +74,10 @@ describe Nikto::XML do
   describe "#options" do
     subject { super().options }
 
+    it "must return a String" do
+      expect(subject).to be_kind_of(String)
+    end
+
     it "must return the 'options' attribute" do
       expect(subject).to eq(doc.root['options'])
     end
@@ -98,6 +102,10 @@ describe Nikto::XML do
   describe "#scan_elapsed" do
     subject { super().scan_elapsed }
 
+    it "must return a String" do
+      expect(subject).to be_kind_of(String)
+    end
+
     it "must return the 'scanelapsed' attribute" do
       expect(subject).to eq(doc.root['scanelapsed'])
     end
@@ -105,6 +113,10 @@ describe Nikto::XML do
 
   describe "#nikto_xml_version" do
     subject { super().nikto_xml_version }
+
+    it "must return a String" do
+      expect(subject).to be_kind_of(String)
+    end
 
     it "must return the 'nxmlversion' attribute" do
       expect(subject).to eq(doc.root['nxmlversion'])

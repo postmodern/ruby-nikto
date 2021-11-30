@@ -14,6 +14,10 @@ describe Nikto::XML::Item do
   describe "#description" do
     subject { super().description }
 
+    it "must return a String" do
+      expect(subject).to be_kind_of(String)
+    end
+
     it "must return the inner text of the 'description' child element" do
       expect(subject).to eq(node.at_xpath('description').inner_text)
     end
@@ -21,6 +25,10 @@ describe Nikto::XML::Item do
 
   describe "#uri" do
     subject { super().uri }
+
+    it "must return a String" do
+      expect(subject).to be_kind_of(String)
+    end
 
     it "must return the inner text of the 'uri' child element" do
       expect(subject).to eq(node.at_xpath('uri').inner_text)
@@ -30,6 +38,10 @@ describe Nikto::XML::Item do
   describe "#name_link" do
     subject { super().name_link }
 
+    it "must return a String" do
+      expect(subject).to be_kind_of(String)
+    end
+
     it "must return the inner text of the 'namelink' child element" do
       expect(subject).to eq(node.at_xpath('namelink').inner_text)
     end
@@ -37,6 +49,10 @@ describe Nikto::XML::Item do
 
   describe "#ip_link" do
     subject { super().ip_link }
+
+    it "must return a String" do
+      expect(subject).to be_kind_of(String)
+    end
 
     it "must return the inner text of the 'iplink' child element" do
       expect(subject).to eq(node.at_xpath('iplink').inner_text)
