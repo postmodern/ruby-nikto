@@ -12,6 +12,7 @@ metadata:
   source_code_uri:   https://github.com/postmodern/ruby-nikto
   bug_tracker_uri:   https://github.com/postmodern/ruby-nikto/issues
   changelog_uri:     https://github.com/postmodern/ruby-nikto/blob/master/ChangeLog.md
+  rubygems_mfa_required: 'true'
 
 requirements: nikto >= 2.1.0
 
