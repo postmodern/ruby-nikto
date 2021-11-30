@@ -5,13 +5,15 @@ require 'nokogiri'
 module Nikto
   class XML
 
+    # The parsed XML document.
+    #
+    # @return [Nokogiri::XML]
+    attr_reader :doc
+
     # The path to the XML file.
     #
     # @return [String, nil]
     attr_reader :path
-
-    # The parsed XML document.
-    attr_reader :doc
 
     #
     # Creates a new XML object.
@@ -30,8 +32,8 @@ module Nikto
     #   The newly created XML parser.
     #
     def initialize(doc, path: nil)
-      @path = File.expand_path(path) if path
       @doc  = doc
+      @path = File.expand_path(path) if path
 
       yield self if block_given?
     end
@@ -104,7 +106,7 @@ module Nikto
     # @return [String]
     #
     def scan_elapsed
-      @doc.root['scan_elapsed']
+      @doc.root['scanelapsed']
     end
 
     #
@@ -147,6 +149,17 @@ module Nikto
     #
     def target
       each_target.first
+    end
+
+    #
+    # @return [String]
+    #
+    def to_s
+      if @path
+        @path
+      else
+        @doc.to_s
+      end
     end
 
   end
