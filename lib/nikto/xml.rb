@@ -87,8 +87,9 @@ module Nikto
     #
     def self.open(path,&block)
       path = File.expand_path(path)
+      doc  = Nokogiri::XML(File.open(path))
 
-      new(Nokogiri::XML(File.open(path)), path: path, &block)
+      new(doc, path: path, &block)
     end
 
     #
