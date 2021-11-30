@@ -2,24 +2,39 @@ module Nikto
   class XML
     class Item
 
+      #
+      # @param [Nokogiri::XML::Node] node
+      #
       def initialize(node)
         @node = node
       end
 
+      #
+      # @return [String]
+      #
       def description
-        @description ||= @node.xpath('description').inner_text
+        @description ||= @node.at_xpath('description').inner_text
       end
 
+      #
+      # @return [String]
+      #
       def uri
-        @uri ||= @node.xpath('uri').inner_text
+        @uri ||= @node.at_xpath('uri').inner_text
       end
 
+      #
+      # @return [String]
+      #
       def name_link
-        @name_link ||= @node.xpath('namelink').inner_text
+        @name_link ||= @node.at_xpath('namelink').inner_text
       end
 
+      #
+      # @return [String]
+      #
       def ip_link
-        @ip_link ||= @node.xpath('iplink').inner_text
+        @ip_link ||= @node.at_xpath('iplink').inner_text
       end
 
     end
