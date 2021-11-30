@@ -31,6 +31,8 @@ module Nikto
     # @yieldparam [XML] xml
     #   The newly created XML parser.
     #
+    # @api private
+    #
     def initialize(doc, path: nil)
       @doc  = doc
       @path = File.expand_path(path) if path
@@ -47,6 +49,8 @@ module Nikto
     # @return [XML]
     #   The parsed XML.
     #
+    # @api public
+    #
     def self.parse(xml)
       new(Nokogiri::XML(xml))
     end
@@ -59,6 +63,8 @@ module Nikto
     #
     # @return [XML]
     #   The parsed XML.
+    #
+    # @api public
     #
     def self.open(path)
       path = File.expand_path(path)
