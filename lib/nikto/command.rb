@@ -2,7 +2,13 @@ require 'command_mapper/command'
 
 module Nikto
   #
-  # ## Nikto options:
+  # ## Example
+  #
+  #     require 'nikto/command'
+  #     
+  #     Nikto::Command.run(host: 'example.com', output: 'nikto.xml')
+  #
+  # ## `nikto` options:
   #
   # * `-Cgidirs` - `nikto.cgi_dirs`
   # * `-config` - `nikto.config`
