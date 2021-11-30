@@ -21,7 +21,7 @@ module Nikto
       # The number of seconds elapsed.
       #
       # @return [Intger]
-      #   The `elapsed` attribute's parsed value.
+      #   The parsed value of the `elapsed` attribute.
       #
       def elapsed
         @elapsed ||= @node['elapsed'].to_i
@@ -31,7 +31,7 @@ module Nikto
       # The number of items found.
       #
       # @return [Intger]
-      #   The `itemsfound` attribute's parsed value.
+      #   The parsed value of the `itemsfound` attribute.
       #
       def items_found
         @items_found ||= @node['itemsfound'].to_i
@@ -41,7 +41,7 @@ module Nikto
       # The number of items tested.
       #
       # @return [Intger]
-      #   The `itemstested` attribute's parsed value.
+      #   The parsed value of the `itemstested` attribute.
       #
       def items_tested
         @items_tested ||= @node['itemstested'].to_i
@@ -51,7 +51,7 @@ module Nikto
       # The end-time of the scan.
       #
       # @return [Time]
-      #   The `endtime` attribute's parsed value.
+      #   The parsed value of the `endtime` attribute.
       #
       def end_time
         @end_time ||= Time.parse(@node['endtime'])

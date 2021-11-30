@@ -79,7 +79,7 @@ module Nikto
     # The `hoststest` value.
     #
     # @return [Integer]
-    #   The `hoststest` attribute's parsed value.
+    #   The parsed value of the `hoststest` attribute.
     #
     def hosts_test
       @hosts_test ||= @doc.root['@hoststest'].to_i
@@ -89,7 +89,7 @@ module Nikto
     # Additional command-line options passed to `nikto`.
     #
     # @return [String]
-    #   The `options` attribute's value.
+    #   The value of the `options` attribute.
     #
     def options
       @doc.root['options']
@@ -99,7 +99,7 @@ module Nikto
     # When the scan started.
     #
     # @return [Time]
-    #   The `scanstart` attribute's parsed value.
+    #   The parsed value of the `scanstart` attribute.
     #
     def scan_start
       @scan_start ||= Time.parse(@doc.root['scanstart'])
@@ -109,7 +109,7 @@ module Nikto
     # When the scan completed.
     #
     # @return [Time]
-    #   The `scanned` attribute's parsed value.
+    #   The parsed value `scanned` attribute.
     #
     def scan_end
       @scan_end ||= Time.parse(@doc.root['scanend'])
@@ -119,7 +119,7 @@ module Nikto
     # The duration of the scan.
     #
     # @return [String]
-    #   The `scanelapsed` attribute's value.
+    #   The value of the `scanelapsed` attribute.
     #
     def scan_elapsed
       @doc.root['scanelapsed']
@@ -129,7 +129,7 @@ module Nikto
     # The Nikto XML schema version.
     #
     # @return [String]
-    #   The `nxmlversion` attribute's value.
+    #   The value of the `nxmlversion` attribute.
     #
     def nikto_xml_version
       @doc.root['nxmlversion']
