@@ -6,6 +6,14 @@ module Nikto
   #
   # Represents an nikto XML file or XML data.
   #
+  # ## Example
+  #
+  #     require 'nikto/xml'
+  #
+  #     Nikto::XML.open('nikto.xml') do |xml|
+  #       ...
+  #     end
+  #
   class XML
 
     # The parsed XML document.
