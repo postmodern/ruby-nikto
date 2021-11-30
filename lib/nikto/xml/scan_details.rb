@@ -114,7 +114,7 @@ module Nikto
       # @return [Statistics]
       #
       def statistics
-        @statistics ||= Statistics.new(@node.xpath('statistics'))
+        @statistics ||= Statistics.new(@node.at_xpath('statistics'))
       end
 
     end
