@@ -59,6 +59,18 @@ end
 $ gem install ruby-nikto
 ```
 
+### gemspec
+
+```ruby
+gemspec.add_dependency 'ruby-nikto', '~> 0.1'
+```
+
+### Gemfile
+
+```ruby
+gem 'ruby-nikto', '~> 0.1'
+```
+
 ## License
 
 Copyright (c) 2009-2021 Hal Brodigan
