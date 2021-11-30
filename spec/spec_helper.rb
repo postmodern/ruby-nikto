@@ -1,4 +1,6 @@
 require 'rspec'
-require 'nikto/version'
+require 'simplecov'
+SimpleCov.start
 
+require 'nikto/version'
 include Nikto
