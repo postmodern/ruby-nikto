@@ -181,7 +181,8 @@ module Nikto
     # Converts the XML object to a String.
     #
     # @return [String]
-    #   The path to the XML file or the XML if the XML was parsed from a String.
+    #   The path to the XML if {#path} is set, or the XML if the XML was parsed
+    #   from a String.
     #
     def to_s
       if @path
