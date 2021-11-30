@@ -1,3 +1,5 @@
+[![CI](https://github.com/postmodern/ruby-nikto/actions/workflows/ruby.yml/badge.svg)](https://github.com/postmodern/ruby-nikto/actions/workflows/ruby.yml)
+
 # ruby-nikto
 
 * [Source](https://github.com/sophsec/ruby-nikto)
