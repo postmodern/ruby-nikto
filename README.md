@@ -34,7 +34,16 @@ Parse Nikto XML scan files:
 require 'nikto/xml'
 
 Nikto::XML.open('nikto.xml') do |xml|
-  # ...
+  xml.each_scan_details do |scan_details|
+    puts "#{scan_details.site_name}"
+
+    scan_details.each_item do |item|
+      puts "  #{item.uri}"
+      puts
+      puts "    #{item.description}"
+      puts
+    end
+  end
 end
 ```
 
