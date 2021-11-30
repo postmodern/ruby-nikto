@@ -50,8 +50,8 @@ end
 ## Requirements
 
 * [nikto] >= 2.1.0
-* [nokogiri](https://github.com/sparklemotion/nokogiri#readme) ~> 1.0
 * [command_mapper](http://github.com/postmodern/command_mapper.rb#readme) ~> 0.1
+* [nokogiri](https://github.com/sparklemotion/nokogiri#readme) ~> 1.0
 
 ## Install
 
