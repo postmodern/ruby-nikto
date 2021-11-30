@@ -11,6 +11,8 @@ module Nikto
     # The parsed XML document.
     #
     # @return [Nokogiri::XML]
+    #
+    # @api private
     attr_reader :doc
 
     # The path to the XML file.

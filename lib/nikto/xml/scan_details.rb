@@ -11,7 +11,12 @@ module Nikto
     class ScanDetails
 
       #
+      # Initializes the scan details object.
+      #
       # @param [Nokogiri::XML::Node] node
+      #   The XML node for the `scandetails` XML element.
+      #
+      # @api private
       #
       def initialize(node)
         @node = node
