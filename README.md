@@ -1,4 +1,5 @@
 [![CI](https://github.com/postmodern/ruby-nikto/actions/workflows/ruby.yml/badge.svg)](https://github.com/postmodern/ruby-nikto/actions/workflows/ruby.yml)
+[![Gem Version](https://badge.fury.io/rb/ruby-nikto.svg)](https://badge.fury.io/rb/ruby-nikto)
 
 # ruby-nikto
 
