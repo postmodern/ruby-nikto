@@ -134,26 +134,27 @@ describe Nikto::XML do
     subject { super().scan_details }
 
     it "must return an Array of #{described_class}::ScanDetails" do
+      expect(subject).to be_kind_of(Array)
       expect(subject.length).to be(1)
       expect(subject[0]).to be_kind_of(described_class::ScanDetails)
     end
   end
 
   describe "#target" do
-    let(:scan_details) { subject.scan_details.first }
-    let(:target)       { subject.target }
+    let(:first_scan_details) { subject.scan_details.first }
+    let(:target)             { subject.target             }
 
     it "must return the first #scan_details" do
-      expect(target.target_ip).to eq(scan_details.target_ip)
-      expect(target.target_hostname).to eq(scan_details.target_hostname)
-      expect(target.target_port).to eq(scan_details.target_port)
-      expect(target.target_banner).to eq(scan_details.target_banner)
-      expect(target.start_time).to eq(scan_details.start_time)
-      expect(target.site_name).to eq(scan_details.site_name)
-      expect(target.site_ip).to eq(scan_details.site_ip)
-      expect(target.host_header).to eq(scan_details.host_header)
-      expect(target.errors).to eq(scan_details.errors)
-      expect(target.checks).to eq(scan_details.checks)
+      expect(target.target_ip).to eq(first_scan_details.target_ip)
+      expect(target.target_hostname).to eq(first_scan_details.target_hostname)
+      expect(target.target_port).to eq(first_scan_details.target_port)
+      expect(target.target_banner).to eq(first_scan_details.target_banner)
+      expect(target.start_time).to eq(first_scan_details.start_time)
+      expect(target.site_name).to eq(first_scan_details.site_name)
+      expect(target.site_ip).to eq(first_scan_details.site_ip)
+      expect(target.host_header).to eq(first_scan_details.host_header)
+      expect(target.errors).to eq(first_scan_details.errors)
+      expect(target.checks).to eq(first_scan_details.checks)
     end
   end
 
