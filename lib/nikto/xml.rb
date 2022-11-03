@@ -219,10 +219,8 @@ module Nikto
     #   from a String.
     #
     def to_s
-      if @path
-        @path
-      else
-        @doc.to_s
+      if @path then @path
+      else          @doc.to_s
       end
     end
 
